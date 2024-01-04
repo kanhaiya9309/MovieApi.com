@@ -1,6 +1,6 @@
 import express from "express";
-import mongoose from "mongoose";
-import Meme from "../Models/memeModel.js";
+// import mongoose from "mongoose";
+// import Meme from "../Models/memeModel.js";
 import cors from "cors" ;
 import rateLimit from "express-rate-limit" ;
 
@@ -341,7 +341,7 @@ const movies2023 = [
   
 
 
-Meme.insertMany(memeData);
+// Meme.insertMany(memeData);
 
 routes.use('/movies', limiter);
 routes.use('/MoviesOfYear', limiter);
@@ -397,17 +397,15 @@ data :  topIndianMovies2023
 })
  
 routes.get('/Meme',(req,res)=>{
-    Meme.find()
-    .then((memes)=>{
-     let randomMeme = Math.floor(Math.random()*memeData.length)
-     res.setHeader('Content-Type', 'application/json')
-     res.json(memes[randomMeme])
-     console.log("Meme is access by Database")
-       
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
+  try{
+   let randomMeme = Math.floor(Math.random() * memeData.length) ;
+   res.status(200).json(memeData[randomMeme]);
+  }
+  catch(error){
+    console.log(error)
+  }
+    
+    
  })
 
 
