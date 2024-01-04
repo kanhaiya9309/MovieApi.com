@@ -30,6 +30,7 @@ Welcome to MovieAPI, a project showcasing my skills in building a full-stack app
 2. Install dependencies with `npm install`.
 3. Run the server using `npm start`.
 4. Access the routes at:
+   -  https://movieapi-app.onrender.com/
    - https://movieapi-app.onrender.com/movies
    - https://movieapi-app.onrender.com//moviesOfYear
 
