@@ -8,9 +8,15 @@ let memeGenaratorDiv = document.getElementById('meme-Generator-div');
 // let memeAuthor = document.getElementById('author');
 //let memeApi = "https://meme-api.com/gimme/wholesomememes";
 
-let moviesApi  = 'http://localhost:3000/movies';
+// let moviesApi  = 'http://localhost:3000/movies';
 
-let moviesYear2023 = "http://localhost:3000/MoviesOfYear"
+// let moviesYear2023 = "http://localhost:3000/MoviesOfYear"
+
+
+let moviesApi  = 'https://movieapi-89q6.onrender.com/Movies';
+
+let moviesYear2023 = "https://movieapi-89q6.onrender.com/MoviesOfYear"
+
 
 
 memeGenerateButton.addEventListener('click',generateMoviesofYear);
